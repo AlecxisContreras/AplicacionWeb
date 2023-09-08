@@ -49,7 +49,12 @@
       $conexion = mysqli_connect("localhost", "root", "", "aplicacionweb");
 
       if (mysqli_connect_errno()) {
-        echo "Error al conectar con la base de datos: " . mysqli_connect_error();
+        echo '
+        <script>
+            alert("Error al conectar con la base de datos");
+            window.location = "../Directorio.php";
+        </script>
+        ';
         exit();
       }
 
@@ -79,7 +84,12 @@
 
         mysqli_free_result($resultado);
       } else {
-        echo "Error al realizar la consulta: " . mysqli_error($conexion);
+        echo '
+        <script>
+            alert("Error al realizar la consulta");
+            window.location = "../Directorio.php";
+        </script>
+        ';
       }
 
       mysqli_close($conexion);
