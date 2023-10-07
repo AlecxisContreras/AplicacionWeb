@@ -4,3 +4,5 @@ FLUSH PRIVILEGES;
 
 
 SHOW MASTER STATUS;
+
+log-bin=mysql-bin
