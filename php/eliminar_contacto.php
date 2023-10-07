@@ -1,16 +1,6 @@
 <?php
 if (isset($_POST['eliminar'])) {
-    $conexion = mysqli_connect("localhost", "root", "", "aplicacionweb");
-
-    if (mysqli_connect_errno()) {
-        echo '
-        <script>
-            alert("Error al conectar con la base de datos");
-            window.location = "../Directorio.php";
-        </script>
-        ';
-        exit();
-    }
+    include 'conexion_be.php';
 
     $id = $_POST['Id'];
 
