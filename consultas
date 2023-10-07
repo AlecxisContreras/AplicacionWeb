@@ -1,3 +1,6 @@
 CREATE USER 'usuario_replicante'@'%' IDENTIFIED BY 'contrasena_replicante';
 GRANT REPLICATION SLAVE ON *.* TO 'usuario_replicante'@'%';
 FLUSH PRIVILEGES;
+
+
+SHOW MASTER STATUS;
