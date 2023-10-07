@@ -7,18 +7,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $Correo_Electronico = $_POST["Correo_Electronico"];
 
     // Conecta a la base de datos
-    $conexion = mysqli_connect("localhost", "root", "", "aplicacionweb");
-
-    // Verificar la conexión
-    if (mysqli_connect_errno()) {
-        echo '
-        <script>
-            alert("Error al conectar con la base de datos");
-            window.location = "../Directorio.php";
-        </script>
-        ';
-        exit();
-    }
+   include 'conexion_be.php';
 
     // Prepara la consulta SQL para insertar el nuevo contacto
     $consulta = "INSERT INTO contactos (Nombre, Direccion, Telefono, Correo_Electronico) VALUES (?, ?, ?, ?)";
