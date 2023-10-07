@@ -1,16 +1,5 @@
 <?php
-$conexion = mysqli_connect("localhost", "root", "", "aplicacionweb");
-
-// Verificar la conexión
-if (mysqli_connect_errno()) {
-    echo '
-        <script>
-            alert("Error al conectar con la base de datos");
-            window.location = "../Directorio.php";
-        </script>
-        ';
-    exit();
-}
+include 'conexion_be.php';
 
 // Obtener el código del contacto a editar
 $Id = $_POST['Id'];
