@@ -14,3 +14,5 @@ CHANGE MASTER TO
   MASTER_PASSWORD='contrasena_replicante',
   MASTER_LOG_FILE='nombre_del_archivo_binario',
   MASTER_LOG_POS=posicion_del_archivo_binario;
+
+mysql -u tu_usuario -p
