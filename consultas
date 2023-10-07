@@ -1,5 +1,5 @@
-CREATE USER 'usuario_replicante'@'%' IDENTIFIED BY 'contrasena_replicante';
-GRANT REPLICATION SLAVE ON *.* TO 'usuario_replicante'@'%';
+CREATE USER 'user4'@'192.168.50.4' IDENTIFIED BY 'user4';
+GRANT REPLICATION SLAVE ON *.* TO 'user4'@'192.168.50.4';
 FLUSH PRIVILEGES;
 
 
