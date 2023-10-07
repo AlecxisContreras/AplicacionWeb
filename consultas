@@ -6,3 +6,11 @@ FLUSH PRIVILEGES;
 SHOW MASTER STATUS;
 
 log-bin=mysql-bin
+
+
+CHANGE MASTER TO
+  MASTER_HOST='192.168.50.3',
+  MASTER_USER='usuario_replicante',
+  MASTER_PASSWORD='contrasena_replicante',
+  MASTER_LOG_FILE='nombre_del_archivo_binario',
+  MASTER_LOG_POS=posicion_del_archivo_binario;
