@@ -46,17 +46,7 @@
     </thead>
     <tbody>
       <?php
-      $conexion = mysqli_connect("localhost", "root", "", "aplicacionweb");
-
-      if (mysqli_connect_errno()) {
-        echo '
-        <script>
-            alert("Error al conectar con la base de datos");
-            window.location = "../Directorio.php";
-        </script>
-        ';
-        exit();
-      }
+      include 'conexion_be.php';
 
       $consulta = "SELECT Id, Nombre, Direccion, Telefono, `Correo_Electronico` FROM contactos";
       $resultado = mysqli_query($conexion, $consulta);
